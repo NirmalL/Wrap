@@ -144,9 +144,9 @@ table td {
     width: 60px;
     height: 60px;
     z-index: 100;
-    top: 48%;
     text-align: center;
     text-shadow: none;
 }
-.go-prev {left: 0;}
-.go-next {right: 0;}
+.go-prev {left: 0; top: 48%;}
+.go-next {right: 0; top: 48%;}
+.go-home {bottom: 0; left: 48%;}
