@@ -33,7 +33,7 @@ body, * { margin: 0; padding: 0; }
 }
 
 .presentation {
-    width: 100vh;
+/*    width: 120vh;*/
     margin: auto;
 }
 
@@ -44,20 +44,20 @@ body, * { margin: 0; padding: 0; }
 
 body {
     font-family: 'droid sans', "helvetica neue", helvetica, arial, 'open sans', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .presentation-wrapper { 
     background-color: #111; 
     color: white;
-    text-shadow: 0 0 2px #444;
+    text-shadow: 0 0 2px black;
 }
 
 .slide * { margin: 4px; }
 
-.slide p {
-    margin-left: 60px;
-    margin-right:60px;
+.slide {
+    padding-left: 10%;
+    padding-right:10%;
 }
 
 /* STYLE-CLASSES */
