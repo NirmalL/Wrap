@@ -28,6 +28,16 @@ var slideId=0,
                 slideId=0;
                 slides[slideId].classList.add('current-slide');
             }
+        } else if (e.keyCode=='37') { // right
+            if (slideId>0) {
+                slides[slideId].classList.remove('current-slide');
+                slideId--;
+                slides[slideId].classList.add('current-slide');
+            } else {
+                slides[slideId].classList.remove('current-slide');
+                slideId=slideMax;
+                slides[slideId].classList.add('current-slide');
+            }
         }
     }
     

@@ -55,5 +55,10 @@ body {
 
 .slide * { margin: 4px; }
 
+.slide p {
+    margin-left: 60px;
+    margin-right:60px;
+}
+
 /* STYLE-CLASSES */
 
