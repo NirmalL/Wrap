@@ -6,6 +6,46 @@ var slideId=0,
     slides
 ;
 
+function nextSlide() {
+    if (slideId<slideMax) {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
+                slides[slideId].classList.remove('current-slide');
+                slideId++;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
+                slides[slideId].classList.add('current-slide');
+            } else {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
+                slides[slideId].classList.remove('current-slide');
+                slideId=0;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
+                slides[slideId].classList.add('current-slide');
+            }
+}
+
+function prevSlide() {
+    if (slideId>0) {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
+                slides[slideId].classList.remove('current-slide');
+                slideId--;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
+                slides[slideId].classList.add('current-slide');
+            } else {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
+                slides[slideId].classList.remove('current-slide');
+                slideId=slideMax;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
+                slides[slideId].classList.add('current-slide');
+            }
+}
+
 (function (){
     
     // set iterative IDs for the slides(wrappers)
@@ -27,41 +67,9 @@ var slideId=0,
     document.onkeydown = function (e) {
         e = e || window.event;
         if (e.keyCode=='39' || e.keyCode=='32' || e.keyCode=='40') { // right
-            if (slideId<slideMax) {
-                slides[slideId].classList.remove('visible');
-                slides[slideId].classList.add('hidden');
-                slides[slideId].classList.remove('current-slide');
-                slideId++;
-                slides[slideId].classList.remove('hidden');
-                slides[slideId].classList.add('visible');
-                slides[slideId].classList.add('current-slide');
-            } else {
-                slides[slideId].classList.remove('visible');
-                slides[slideId].classList.add('hidden');
-                slides[slideId].classList.remove('current-slide');
-                slideId=0;
-                slides[slideId].classList.remove('hidden');
-                slides[slideId].classList.add('visible');
-                slides[slideId].classList.add('current-slide');
-            }
+            nextSlide();
         } else if (e.keyCode=='37' || e.keyCode=='38') { // right
-            if (slideId>0) {
-                slides[slideId].classList.remove('visible');
-                slides[slideId].classList.add('hidden');
-                slides[slideId].classList.remove('current-slide');
-                slideId--;
-                slides[slideId].classList.remove('hidden');
-                slides[slideId].classList.add('visible');
-                slides[slideId].classList.add('current-slide');
-            } else {
-                slides[slideId].classList.remove('visible');
-                slides[slideId].classList.add('hidden');
-                slides[slideId].classList.remove('current-slide');
-                slideId=slideMax;
-                slides[slideId].classList.remove('hidden');
-                slides[slideId].classList.add('visible');
-                slides[slideId].classList.add('current-slide');
-            }
+            prevSlide();
         }
     }
     
