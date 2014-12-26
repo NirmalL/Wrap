@@ -38,7 +38,7 @@ body, * { margin: 0; padding: 0; }
 }
 
 .slide-wrapper { display: none; }
-#current-slide { display: table; }
+.current-slide { display: table; }
 
 /* WRAP-DEFAULTS */
 
@@ -50,7 +50,7 @@ body {
 .presentation-wrapper { 
     background-color: #111; 
     color: white;
-    text-shadow: 0 0 2px #333;
+    text-shadow: 0 0 2px #444;
 }
 
 .slide * { margin: 4px; }
