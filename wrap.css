@@ -82,6 +82,14 @@ a {
 
 .slide-wrapper { background-size: cover; }
 
+table, table * { 
+/*    border: 1px solid #999; */
+    border-spacing: 12px;
+}
+table td {
+    line-height: 36px; 
+}
+
 /* STYLE-CLASSES */
 
 .white { color: white; }
@@ -108,7 +116,7 @@ a {
 
 .w-100 { width: 100%; }
 
-.pad-w-70 { padding-left: 20%; padding-right: 20%; }
+.pad-w-20 { padding-left: 20%; padding-right: 20%; }
 
 .small { font-size: 22px; line-height: 24px; }
 
@@ -118,3 +126,5 @@ a {
 .align-middle { vertical-align: middle; }
 .align-top { vertical-align: top; }
 .align-bottom { vertical-align: bottom; }
+
+.border-top-grey { border-top: 4px solid #999; }
