@@ -129,3 +129,20 @@ table td {
 .align-bottom { vertical-align: bottom; }
 
 .border-top-grey { border-top: 4px solid #999; }
+
+/* BUTTONS */
+
+.btn-go {
+    background-color: transparent;
+    border: none;
+    color: white;
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+    top: 45%;
+}
+.go-prev {left: 0;}
+.go-next {right: 0;}

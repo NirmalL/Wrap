@@ -6,7 +6,7 @@ var slideId=0,
     slides
 ;
 
-function nextSlide() {
+function nextSlide(el) {
     if (slideId<slideMax) {
                 slides[slideId].classList.remove('visible');
                 slides[slideId].classList.add('hidden');
@@ -24,9 +24,12 @@ function nextSlide() {
                 slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
+    if (el) {
+        el.style.color='#777';
+    }
 }
 
-function prevSlide() {
+function prevSlide(el) {
     if (slideId>0) {
                 slides[slideId].classList.remove('visible');
                 slides[slideId].classList.add('hidden');
@@ -44,6 +47,9 @@ function prevSlide() {
                 slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
+    if (el) {
+        el.style.color='#777';
+    }
 }
 
 (function (){
