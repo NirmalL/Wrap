@@ -9,6 +9,7 @@ var slideId=0,
     slides=document.getElementsByClassName('slide-wrapper');
     for (var i=0; i<slides.length; i++) {
         slides[i].setAttribute('id', i);
+        if (i!=0) slides[i].classList.add('hidden');
         slideMax++;
     }
     
@@ -20,22 +21,38 @@ var slideId=0,
         e = e || window.event;
         if (e.keyCode=='39') { // right
             if (slideId<slideMax) {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
                 slides[slideId].classList.remove('current-slide');
                 slideId++;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             } else {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
                 slides[slideId].classList.remove('current-slide');
                 slideId=0;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
         } else if (e.keyCode=='37') { // right
             if (slideId>0) {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
                 slides[slideId].classList.remove('current-slide');
                 slideId--;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             } else {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
                 slides[slideId].classList.remove('current-slide');
                 slideId=slideMax;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
         }

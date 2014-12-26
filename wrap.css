@@ -37,8 +37,20 @@ body, * { margin: 0; padding: 0; }
     margin: auto;
 }
 
-.slide-wrapper { display: none; }
+.slide-wrapper { position: absolute; }
 .current-slide { display: table; }
+
+.hidden {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
 
 /* WRAP-DEFAULTS */
 
@@ -48,6 +60,7 @@ body {
 }
 
 .presentation-wrapper { 
+    height: 100vh;
     background-color: #111; 
     color: white;
     text-shadow: 0 0 2px black;
