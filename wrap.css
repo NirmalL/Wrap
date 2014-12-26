@@ -60,5 +60,11 @@ body {
     padding-right:10%;
 }
 
+a { 
+    text-decoration: none;
+    color: #FF4E00; /* @orange */
+}
+    a:hover { text-decoration: underline; }
+
 /* STYLE-CLASSES */
 
