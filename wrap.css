@@ -1,0 +1,59 @@
+/*div.slide { border: 1px solid skyblue; }*/
+/* ^^^ test */
+
+/* NORMALIZE */
+img { display: inline-block; }
+body, * { margin: 0; padding: 0; }
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* WRAP-STYLES */
+
+.slide-wrapper {
+    display: table;
+    height: 100vh; /*@temp*/
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.presentation-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.presentation {
+    width: 100vh;
+    margin: auto;
+}
+
+.slide-wrapper { display: none; }
+#current-slide { display: table; }
+
+/* WRAP-DEFAULTS */
+
+body {
+    font-family: 'droid sans', "helvetica neue", helvetica, arial, 'open sans', sans-serif;
+    font-size: 24px;
+}
+
+.presentation-wrapper { 
+    background-color: #111; 
+    color: white;
+    text-shadow: 0 0 2px #333;
+}
+
+.slide * { margin: 4px; }
+
+/* STYLE-CLASSES */
+
