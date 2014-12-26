@@ -68,3 +68,6 @@ a {
 
 /* STYLE-CLASSES */
 
+.white { color: white; }
+.orange { color: #FF4E00; /* @orange */ }
+.grey { color: #999; }
