@@ -33,7 +33,7 @@ body, * { margin: 0; padding: 0; }
 }
 
 .presentation {
-/*    width: 120vh;*/
+    max-width: 130vh;
     margin: auto;
 }
 
