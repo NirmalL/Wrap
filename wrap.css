@@ -73,3 +73,7 @@ a {
 .white { color: white; }
 .orange { color: #FF4E00; /* @orange */ }
 .grey { color: #999; }
+
+.slide-bg-dark {
+    background-color: rgba(0, 0, 0, 0.58);
+}
