@@ -142,7 +142,9 @@ table td {
     width: 60px;
     height: 60px;
     z-index: 100;
-    top: 45%;
+    top: 48%;
+    text-align: center;
+    text-shadow: none;
 }
 .go-prev {left: 0;}
 .go-next {right: 0;}

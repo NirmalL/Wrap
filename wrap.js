@@ -49,6 +49,7 @@ function prevSlide(el) {
             }
     if (el) {
         el.style.color='#777';
+        //el.style.textShadow='0 0 4px #444';
     }
 }
 
