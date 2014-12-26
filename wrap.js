@@ -53,6 +53,23 @@ function prevSlide(el) {
     }
 }
 
+function homeSlide(el) {
+    if (slideId>0) {
+                slides[slideId].classList.remove('visible');
+                slides[slideId].classList.add('hidden');
+                slides[slideId].classList.remove('current-slide');
+                slideId=0;
+                slides[slideId].classList.remove('hidden');
+                slides[slideId].classList.add('visible');
+                slides[slideId].classList.add('current-slide');
+        }
+    
+    if (el) {
+        el.style.color='#777';
+        //el.style.textShadow='0 0 4px #444';
+    }
+}
+
 (function (){
     
     // set iterative IDs for the slides(wrappers)
@@ -75,8 +92,10 @@ function prevSlide(el) {
         e = e || window.event;
         if (e.keyCode=='39' || e.keyCode=='32' || e.keyCode=='40') { // right
             nextSlide();
-        } else if (e.keyCode=='37' || e.keyCode=='38') { // right
+        } else if (e.keyCode=='37' || e.keyCode=='38') { // left
             prevSlide();
+        } else if (e.keyCode=='36') {
+            homeSlide();
         }
     }
     
