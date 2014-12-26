@@ -24,9 +24,9 @@ function nextSlide(el) {
                 slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
-    if (el) {
-        el.style.color='#777';
-    }
+//    if (el) {
+//        el.style.color='#777';
+//    }
 }
 
 function prevSlide(el) {
@@ -47,10 +47,10 @@ function prevSlide(el) {
                 slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
-    if (el) {
-        el.style.color='#777';
-        //el.style.textShadow='0 0 4px #444';
-    }
+//    if (el) {
+//        el.style.color='#777';
+//        //el.style.textShadow='0 0 4px #444';
+//    }
 }
 
 function homeSlide(el) {
@@ -64,9 +64,9 @@ function homeSlide(el) {
                 slides[slideId].classList.add('current-slide');
         }
     
-    if (el) {
-        el.style.color='#777';
-    }
+//    if (el) {
+//        el.style.color='#777';
+//    }
 }
 
 (function (){

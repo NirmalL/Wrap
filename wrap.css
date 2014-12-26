@@ -147,6 +147,7 @@ table td {
     text-align: center;
     text-shadow: none;
 }
+.btn-go:hover { color: #777; }
 .go-prev {left: 0; top: 48%;}
 .go-next {right: 0; top: 48%;}
 .go-home {bottom: 0; left: 48%;}
