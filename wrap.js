@@ -1,3 +1,6 @@
+var editing=false;
+//editing=true;
+
 var slideId=0,
     slideMax=-1,
     slides
@@ -8,8 +11,12 @@ var slideId=0,
     // set iterative IDs for the slides(wrappers)
     slides=document.getElementsByClassName('slide-wrapper');
     for (var i=0; i<slides.length; i++) {
+        // remove position:absolute if editing-mode is true
+        if (editing) slides[i].style.position='relative';
+        // set id's
         slides[i].setAttribute('id', i);
-        if (i!=0) slides[i].classList.add('hidden');
+        // .hidden animation
+        if (i!=0 && !editing) slides[i].classList.add('hidden');
         slideMax++;
     }
     
@@ -19,7 +26,7 @@ var slideId=0,
     // track arrow-keys and change slides
     document.onkeydown = function (e) {
         e = e || window.event;
-        if (e.keyCode=='39') { // right
+        if (e.keyCode=='39' || e.keyCode=='32' || e.keyCode=='40') { // right
             if (slideId<slideMax) {
                 slides[slideId].classList.remove('visible');
                 slides[slideId].classList.add('hidden');
@@ -37,7 +44,7 @@ var slideId=0,
                 slides[slideId].classList.add('visible');
                 slides[slideId].classList.add('current-slide');
             }
-        } else if (e.keyCode=='37') { // right
+        } else if (e.keyCode=='37' || e.keyCode=='38') { // right
             if (slideId>0) {
                 slides[slideId].classList.remove('visible');
                 slides[slideId].classList.add('hidden');
